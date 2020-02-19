@@ -1,25 +1,37 @@
-export function setLocalStorage(name, data) {
+function setLocalStorage(name, data) {
     localStorage.setItem(name, data)
 }
-export function setSessionStorage(name, data) {
+function setSessionStorage(name, data) {
     sessionStorage.setItem(name, data)
 }
 
+let demo = {
+    demo1: (aa) => {console.log('aa :', aa);},
+    demo2: (aa) => {console.log('22aa :', aa);}
+}
 
-export function getLocalStorage(name) {
+let test = (res) => {console.log('res :', res);}
+
+function getLocalStorage(name) {
     return localStorage.getItem(name)
 }
-export function getSessionStorage(name) {
+function getSessionStorage(name) {
     return sessionStorage.getItem(name)
 }
 
-export function clearLocalStorage() {
+function clearLocalStorage() {
     return localStorage.clear()
 }
-export function clearSessionStorage() {
+function clearSessionStorage() {
     return sessionStorage.clear();
 }
 
-export function removeSessionStorage(name) {
+function removeSessionStorage(name) {
     return sessionStorage.removeItem(name)
+}
+
+export {
+    setLocalStorage,
+    demo,
+    test
 }
