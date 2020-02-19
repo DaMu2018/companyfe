@@ -30,8 +30,7 @@ function removeSessionStorage(name) {
     return sessionStorage.removeItem(name)
 }
 
-export {
+module.exports = {
     setLocalStorage,
-    demo,
-    test
+    demo
 }
